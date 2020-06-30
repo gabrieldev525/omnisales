@@ -1,41 +1,23 @@
 // react imports
 import React from 'react'
-import { Link } from 'react-router-dom'
-
-// project imports
-import routers from '../../routers'
 
 // local imports
+import SideMenu from './side-menu'
+import TopMenu from './top-menu'
 import {
-  Container,
-  MenuItem
-} from './styles'
+  ContainerMenu,
+  ContainerTopMenu
+} from './styles.js'
 
 export default function Menu({ children }) {
   return (
-    <>
-      <Container>
-        <ul>
-          {
-            routers.map((route, index) => {
-              if (route.menu)
-                return (
-                  <MenuItem key={index}>
-                    {
-                      route.path ? (
-                        <Link to={route.path}>{route.name && route.name}</Link>
-                      ) : (
-                          <span>{route.name && route.name}</span>
-                        )
-                    }
-                  </MenuItem>
-                )
-            })
-          }
-        </ul>
-      </Container>
+    <ContainerMenu>
+      <SideMenu />
+      <ContainerTopMenu>
+        <TopMenu />
 
-      {children}
-    </>
+        {children}
+      </ContainerTopMenu>
+    </ContainerMenu>
   )
 }
