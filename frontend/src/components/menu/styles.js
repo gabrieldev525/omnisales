@@ -26,7 +26,7 @@ export const Container = styled.div`
     width: 90%;
     justify-content: flex-end;
     list-style-type: none;
-    margin-right: 1%;
+    margin-right: 5px;
   }
 
   li {
