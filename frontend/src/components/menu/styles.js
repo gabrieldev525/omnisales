@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
 
   li {
-    margin-right: 3%;
+    margin-right: 25px;
     cursor: pointer;
   }
 
