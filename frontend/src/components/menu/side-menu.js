@@ -16,7 +16,7 @@ export default function sideMenu() {
           routers.map((route, index) => {
             if (route.menu)
               return (
-              <div className='menu-item' key={index}>
+              <li className='menu-item' key={index}>
                 {
                   route.path ? (
                     <Link to={route.path}>{route.icon && route.icon}</Link>
@@ -24,7 +24,7 @@ export default function sideMenu() {
                     <span>{route.icon && route.icon}</span>
                   )
                 }
-              </div>
+              </li>
             )
           })
         }
