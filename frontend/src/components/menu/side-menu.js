@@ -6,20 +6,17 @@ import { Link } from 'react-router-dom'
 import routers from '../../routers'
 
 // local imports
-import {
-  ContainerSideMenu,
-  MenuItem
-} from './styles'
+import '../../static/css/menu.scss'
 
 export default function sideMenu() {
   return (
-    <ContainerSideMenu>
+    <div className='container-side-menu'>
       <ul>
         {
           routers.map((route, index) => {
             if (route.menu)
               return (
-              <MenuItem key={index}>
+              <li className='menu-item' key={index}>
                 {
                   route.path ? (
                     <Link to={route.path}>{route.icon && route.icon}</Link>
@@ -27,11 +24,11 @@ export default function sideMenu() {
                     <span>{route.icon && route.icon}</span>
                   )
                 }
-              </MenuItem>
+              </li>
             )
           })
         }
       </ul>
-    </ContainerSideMenu>
+    </div>
   )
 }

@@ -1,0 +1,90 @@
+// Base container style for the menu
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+// Side-directed menu style
+.container-side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 75px;
+  background: #2196d9;
+
+  ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li a,
+  li span {
+    font-size: 25px;
+  }
+}
+
+// Link style that provides page navigation
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 1%;
+  cursor: pointer;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Menu style directed to the top
+.container-top-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.3), 0 -2px 5px -2px rgba(0, 0, 0, 0.3);
+  height: 50px;
+
+  span {
+    margin-left: 2%;
+  }
+
+  ul {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 5px;
+  }
+
+  li {
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  
+  // Imagem do usuario
+  .img-user {
+    background: rgba(33, 33, 136, 0.863);
+    width: 35px;
+    height: 35px;
+    margin-right: 3%;
+    border-radius: 50%;
+  }
+}
+

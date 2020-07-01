@@ -11,7 +11,7 @@ import {
 import Menu from './components/menu'
 
 // local imports
-import { GlobalStyles } from './styles'
+import './static/css/global-styles.scss'
 import routers from './routers'
 
 
@@ -24,8 +24,6 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyles />
-
       <HashRouter>
         <Menu>
           <Switch>

@@ -8,14 +8,11 @@ import {
 } from 'react-icons/fi'
 
 // local imports
-import {
-  Container,
-  ImgUser
-} from './styles'
+import '../../static/css/menu.scss'
 
 export default function topMenu() {
   return (
-    <Container>
+    <div className='container'>
       <span>Dashboard</span>
       <ul>
         <li>
@@ -29,7 +26,7 @@ export default function topMenu() {
             size={20} />
         </li>
       </ul>
-      <ImgUser />
-    </Container>
+      <p className='img-user'></p>
+    </div>
   )
 }
