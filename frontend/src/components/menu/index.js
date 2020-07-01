@@ -4,20 +4,17 @@ import React from 'react'
 // local imports
 import SideMenu from './side-menu'
 import TopMenu from './top-menu'
-import {
-  ContainerMenu,
-  ContainerTopMenu
-} from './styles.js'
+import '../../static/css/every-menu-style.scss'
 
 export default function Menu({ children }) {
   return (
-    <ContainerMenu>
+    <div className='container-menu' >
       <SideMenu />
-      <ContainerTopMenu>
+      <div className='container-top-menu'>
         <TopMenu />
 
         {children}
-      </ContainerTopMenu>
-    </ContainerMenu>
+      </div>
+    </div>
   )
 }
