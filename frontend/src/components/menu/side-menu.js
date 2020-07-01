@@ -19,16 +19,16 @@ export default function sideMenu() {
           routers.map((route, index) => {
             if (route.menu)
               return (
-                <MenuItem key={index}>
-                  {
-                    route.path ? (
-                      <Link to={route.path}>{route.icon && route.icon}</Link>
-                    ) : (
-                        <span>{route.icon && route.icon}</span>
-                      )
-                  }
-                </MenuItem>
-              )
+              <MenuItem key={index}>
+                {
+                  route.path ? (
+                    <Link to={route.path}>{route.icon && route.icon}</Link>
+                  ) : (
+                    <span>{route.icon && route.icon}</span>
+                  )
+                }
+              </MenuItem>
+            )
           })
         }
       </ul>

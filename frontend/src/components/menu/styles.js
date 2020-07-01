@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const menuHeight = 50
 
-//
+// Menu style directed to the top
 export const ContainerTopMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ export const ImgUser = styled.p`
   border-radius: 50%;
 `
 
-//
+// Link style that provides page navigation
 export const MenuItem = styled.li`
   height: ${menuHeight}px;
   display: flex;
@@ -61,7 +61,7 @@ export const MenuItem = styled.li`
   }
 `
 
-// Container Menu Main
+// Base container style for the menu
 export const ContainerMenu = styled.div`
   display: flex;
   flex-direction: row;
@@ -69,7 +69,7 @@ export const ContainerMenu = styled.div`
   width: 100%;
 `
 
-//
+// Side-directed menu style
 export const ContainerSideMenu = styled.div`
   display: flex;
   flex-direction: column;
