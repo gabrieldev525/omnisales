@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import routers from '../../routers'
 
 // local imports
-import '../../static/css/every-menu-style.scss'
+import '../../static/css/menu.scss'
 
 export default function sideMenu() {
   return (

@@ -77,13 +77,14 @@
     margin-right: 25px;
     cursor: pointer;
   }
+  
+  // Imagem do usuario
+  .img-user {
+    background: rgba(33, 33, 136, 0.863);
+    width: 35px;
+    height: 35px;
+    margin-right: 3%;
+    border-radius: 50%;
+  }
 }
 
-// Imagem do usuario
-.img-user {
-  background: rgba(33, 33, 136, 0.863);
-  width: 35px;
-  height: 35px;
-  margin-right: 3%;
-  border-radius: 50%;
-}

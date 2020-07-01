@@ -4,7 +4,7 @@ import React from 'react'
 // local imports
 import SideMenu from './side-menu'
 import TopMenu from './top-menu'
-import '../../static/css/every-menu-style.scss'
+import '../../static/css/menu.scss'
 
 export default function Menu({ children }) {
   return (

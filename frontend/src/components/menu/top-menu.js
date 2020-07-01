@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fi'
 
 // local imports
-import '../../static/css/every-menu-style.scss'
+import '../../static/css/menu.scss'
 
 export default function topMenu() {
   return (
