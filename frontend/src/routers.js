@@ -1,5 +1,13 @@
+// react imports
+import React from 'react'
+
 // project imports
 import MainPage from './containers/main'
+
+// third imports
+import {
+  FiAirplay
+} from 'react-icons/fi'
 
 export const routes = [
   {
@@ -7,7 +15,8 @@ export const routes = [
     component: MainPage,
     exact: true,
     menu: true,
-    name: 'Início'
+    name: 'Início',
+    icon: <FiAirplay />
   },
 ]
 
