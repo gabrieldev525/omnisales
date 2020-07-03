@@ -13,14 +13,10 @@ import Menu from './components/menu'
 // local imports
 import './static/css/global-styles.scss'
 import routers from './routers'
+import notFound from './containers/404/not-found'
 
 
 const App = () => {
-  const not_found = () => {
-    return (
-      <h1>Página não encontrada</h1>
-    )
-  }
 
   return (
     <>
@@ -39,7 +35,7 @@ const App = () => {
                   )
               })
             }
-            <Route component={not_found} />
+            <Route component={notFound} />
           </Switch>
         </Menu>
       </HashRouter>

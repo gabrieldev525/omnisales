@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 // Base container style for the menu
 .container-menu {
   display: flex;
@@ -12,7 +14,7 @@
   flex-direction: column;
   height: 100%;
   width: 75px;
-  background: #2196d9;
+  background: $main-color;
 
   ul {
     display: flex;
