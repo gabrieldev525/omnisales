@@ -155,7 +155,7 @@ export default function ProductDetailScreen() {
             <div>
               <HighchartsReact
                 highcharts={Highcharts}
-                options={optionsPie}/>
+                options={optionsPie} />
             </div>
           </div>
         </div>
