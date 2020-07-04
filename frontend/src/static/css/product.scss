@@ -23,6 +23,10 @@
       margin: 5% auto;
     }
 
+    .graphic-column {
+      padding: 0 5%;
+    }
+
     .container-graphic-pie {
       display: flex;
       height: 100%;
@@ -60,8 +64,7 @@
       width: 100%;
 
       .photo-product {
-        width: 50%;
-        height: 90%;
+        width: 250px;
       }
 
       .title {
@@ -73,7 +76,7 @@
 
     .content-product {
       display: flex;
-      margin: 2% 5%;
+      margin: 3% 5%;
       justify-content: space-between;
 
       div .price {
@@ -85,7 +88,7 @@
         cursor: pointer;
         display: flex;
         justify-content: center;
-        width: 30%;
+        width: 170px;
         height: 30px;
         align-items: center;
         border-radius: 24px;
@@ -110,9 +113,12 @@
 
     .feedback {
       height: 100%;
+      width: 100%;
       border: none;
       border-top: 1px solid #e0e0e0;
-      margin: 0 5%;
+      box-sizing: border-box;
+      margin-top: 3%;
+      padding: 0 5%;
 
       .title-content-user {
         font-size: 20px;
@@ -124,6 +130,13 @@
       .content-user {
         display: flex;
         margin-top: 3%;
+        width: 100%;
+
+        .product-container-stars {
+          display: flex;
+          margin-left: auto;
+          margin-right: 0;
+        }
 
         img {
           width: 45px;

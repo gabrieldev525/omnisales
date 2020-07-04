@@ -10,7 +10,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
 // Local imports
-import '../../static/css/details-screen.scss'
+import '../../static/css/product.scss'
 import Tv from '../../static/images/tv.png'
 import Beto from '../../static/images/beto.png'
 import Betinho from '../../static/images/betinho.png'
@@ -26,7 +26,6 @@ export default function ProductDetailScreen() {
       backgroundColor: 'transparent',
       marginTop: 5,
       height: 300,
-      width: 600,
       spacingLeft: 10
     },
     title: '',
@@ -134,7 +133,7 @@ export default function ProductDetailScreen() {
     <div className='container-main'>
       <div className='container-graphic'>
         <p className='title-graphic'>Quantitativo de vendas por mês</p>
-        <div>
+        <div className='graphic-column'>
           <HighchartsReact
             highcharts={Highcharts}
             options={options} />
@@ -170,7 +169,9 @@ export default function ProductDetailScreen() {
         <div className='content-product'>
           <div>
             <p className='price'>R$1570,89</p>
-            {renderStars()}
+            <div className='product-container-stars'>
+              {renderStars()}
+            </div>
           </div>
           <div className='info-platform'>
             <FaSuitcase color='#7d490d' className='bag-icon' />
@@ -189,7 +190,9 @@ export default function ProductDetailScreen() {
               <p className='name-user'>username</p>
               <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
-            {renderStars()}
+            <div className='product-container-stars'>
+              {renderStars()}
+            </div>
           </div>
 
           <div className='content-user'>
@@ -198,7 +201,9 @@ export default function ProductDetailScreen() {
               <p className='name-user'>username</p>
               <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
-            {renderStars()}
+            <div className='product-container-stars'>
+              {renderStars()}
+            </div>
           </div>
 
           <div className='content-user'>
@@ -207,7 +212,9 @@ export default function ProductDetailScreen() {
               <p className='name-user'>username</p>
               <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
+            <div className='product-container-stars'>
             {renderStars()}
+            </div>
           </div>
 
           <div className='content-user'>
@@ -216,7 +223,9 @@ export default function ProductDetailScreen() {
               <p className='name-user'>username</p>
               <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
+            <div className='product-container-stars'>
             {renderStars()}
+            </div>
           </div>
 
         </div>

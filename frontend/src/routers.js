@@ -3,7 +3,7 @@ import React from 'react'
 
 // project imports
 import MainPage from './containers/main'
-import DetailsScreen from './components/details-screen/detailsScreen'
+import ProductDetail from './containers/product/product-detail'
 
 // third imports
 import {
@@ -22,7 +22,7 @@ export const routes = [
   },
   {
     path: '/product/detail',
-    component: DetailsScreen,
+    component: ProductDetail,
     exact: false,
     menu: true,
     name: 'Detalhe do produto',
