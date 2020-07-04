@@ -1,21 +1,25 @@
 @import './variables.scss';
 
 .container-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 90%;
   width: 100%;
   margin: auto 0;
+
+  .product-subcontainer {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
 
   .container-graphic {
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 100%;
     background: $main-color;
     box-shadow: 0px 4px 10px rgba(157, 157, 157, 0.25);
     border-radius: 14px 0px 0px 14px;
+    overflow-y: scroll;
 
     .title-graphic {
       color: #fff;
@@ -30,6 +34,7 @@
     .container-graphic-pie {
       display: flex;
       height: 100%;
+      margin-top: 4%;
 
       .graphic-pie {
         display: flex;
@@ -42,6 +47,7 @@
           color: #fff;
           font-size: 17px;
           margin-bottom: 7%;
+          text-align: center;
         }
       }
     }
@@ -51,16 +57,15 @@
     display: flex;
     flex-direction: column;
     width: 47%;
-    height: 100%;
     background: #fff;
     box-shadow: 0px 4px 10px rgba(157, 157, 157, 0.25);
     border-radius: 0px 14px 14px 0px;
+    overflow-y: scroll;
 
     .product {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 30%;
       width: 100%;
 
       .photo-product {
@@ -76,7 +81,7 @@
 
     .content-product {
       display: flex;
-      margin: 3% 5%;
+      margin: 5% 5%;
       justify-content: space-between;
 
       div .price {
@@ -106,8 +111,7 @@
 
     .description {
       width: 90%;
-      margin-left: 5%;
-      margin-bottom: 1%;
+      margin: 1% auto;
       color: #949494;
     }
 
@@ -118,7 +122,7 @@
       border-top: 1px solid #e0e0e0;
       box-sizing: border-box;
       margin-top: 3%;
-      padding: 0 5%;
+      padding: 3% 5%;
 
       .title-content-user {
         font-size: 20px;

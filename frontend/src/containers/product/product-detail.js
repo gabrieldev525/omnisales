@@ -131,103 +131,105 @@ export default function ProductDetailScreen() {
 
   return (
     <div className='container-main'>
-      <div className='container-graphic'>
-        <p className='title-graphic'>Quantitativo de vendas por mês</p>
-        <div className='graphic-column'>
-          <HighchartsReact
-            highcharts={Highcharts}
-            options={options} />
-        </div>
+      <div className='product-subcontainer'>
+        <div className='container-graphic'>
+          <p className='title-graphic'>Quantitativo de vendas por mês</p>
+          <div className='graphic-column'>
+            <HighchartsReact
+              highcharts={Highcharts}
+              options={options} />
+          </div>
 
-        <div className='container-graphic-pie'>
-          <div className='graphic-pie'>
-            <p>Plataformas com maiores vendas</p>
-            <div>
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={optionsPie} />
+          <div className='container-graphic-pie'>
+            <div className='graphic-pie'>
+              <p>Plataformas com maiores vendas</p>
+              <div>
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={optionsPie} />
+              </div>
+            </div>
+
+            <div className='graphic-pie'>
+              <p>Plataformas com menores vendas</p>
+              <div>
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={optionsPie} />
+              </div>
             </div>
           </div>
 
-          <div className='graphic-pie'>
-            <p>Plataformas com menores vendas</p>
+        </div>
+
+        <div className='container-product'>
+          <div className='product'>
+            <img className='photo-product' src={Tv} />
+            <p className='title'>Televisão SmartTV 40 polegadas Samsung</p>
+          </div>
+          <div className='content-product'>
             <div>
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={optionsPie} />
+              <p className='price'>R$1570,89</p>
+              <div className='product-container-stars'>
+                {renderStars()}
+              </div>
+            </div>
+            <div className='info-platform'>
+              <FaSuitcase color='#7d490d' className='bag-icon' />
+              <p>3 plataformas</p>
             </div>
           </div>
-        </div>
+          <div className='description'>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div className='feedback'>
+            <p className='title-content-user'>Top comentários</p>
 
-      </div>
+            <div className='content-user'>
+              <img src={Beto} />
+              <div>
+                <p className='name-user'>username</p>
+                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+              <div className='product-container-stars'>
+                {renderStars()}
+              </div>
+            </div>
 
-      <div className='container-product'>
-        <div className='product'>
-          <img className='photo-product' src={Tv} />
-          <p className='title'>Televisão SmartTV 40 polegadas Samsung</p>
-        </div>
-        <div className='content-product'>
-          <div>
-            <p className='price'>R$1570,89</p>
-            <div className='product-container-stars'>
+            <div className='content-user'>
+              <img src={Betinho} />
+              <div>
+                <p className='name-user'>username</p>
+                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+              <div className='product-container-stars'>
+                {renderStars()}
+              </div>
+            </div>
+
+            <div className='content-user'>
+              <img src={Girl} />
+              <div>
+                <p className='name-user'>username</p>
+                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+              <div className='product-container-stars'>
               {renderStars()}
+              </div>
             </div>
-          </div>
-          <div className='info-platform'>
-            <FaSuitcase color='#7d490d' className='bag-icon' />
-            <p>3 plataformas</p>
-          </div>
-        </div>
-        <div className='description'>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div className='feedback'>
-          <p className='title-content-user'>Top comentários</p>
 
-          <div className='content-user'>
-            <img src={Beto} />
-            <div>
-              <p className='name-user'>username</p>
-              <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-            <div className='product-container-stars'>
+            <div className='content-user'>
+              <img src={Gil} />
+              <div>
+                <p className='name-user'>username</p>
+                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+              <div className='product-container-stars'>
               {renderStars()}
+              </div>
             </div>
-          </div>
 
-          <div className='content-user'>
-            <img src={Betinho} />
-            <div>
-              <p className='name-user'>username</p>
-              <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-            <div className='product-container-stars'>
-              {renderStars()}
-            </div>
           </div>
-
-          <div className='content-user'>
-            <img src={Girl} />
-            <div>
-              <p className='name-user'>username</p>
-              <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-            <div className='product-container-stars'>
-            {renderStars()}
-            </div>
-          </div>
-
-          <div className='content-user'>
-            <img src={Gil} />
-            <div>
-              <p className='name-user'>username</p>
-              <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-            <div className='product-container-stars'>
-            {renderStars()}
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
