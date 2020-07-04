@@ -13,7 +13,7 @@ import Menu from './components/menu'
 // local imports
 import './static/css/global-styles.scss'
 import routers from './routers'
-import notFound from './containers/404/not-found'
+import notFound from './containers/error/not-found'
 
 
 const App = () => {
@@ -26,13 +26,13 @@ const App = () => {
             {
               routers.map((route, index) => {
                 if (route.path)
-                  return (
-                    <Route
-                      key={index}
-                      path={route.path}
-                      exact={route.exact ? route.exact : false}
-                      component={route.component} />
-                  )
+                return (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact ? route.exact : false}
+                    component={route.component} />
+                )
               })
             }
             <Route component={notFound} />

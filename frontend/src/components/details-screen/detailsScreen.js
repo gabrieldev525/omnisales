@@ -18,7 +18,7 @@ import Girl from '../../static/images/girl.png'
 import Gil from '../../static/images/gil.png'
 
 
-export default function DetailsScreen() {
+export default function ProductDetailScreen() {
 
   const options = {
     chart: {
@@ -89,7 +89,7 @@ export default function DetailsScreen() {
         },
         {
           y: 10,
-          color:  '#52B6EE'
+          color: '#52B6EE'
         },
       ]
     }],
@@ -137,8 +137,7 @@ export default function DetailsScreen() {
         <div>
           <HighchartsReact
             highcharts={Highcharts}
-            options={options}
-          />
+            options={options} />
         </div>
 
         <div className='container-graphic-pie'>
@@ -147,8 +146,7 @@ export default function DetailsScreen() {
             <div>
               <HighchartsReact
                 highcharts={Highcharts}
-                options={optionsPie}
-              />
+                options={optionsPie} />
             </div>
           </div>
 
@@ -157,8 +155,7 @@ export default function DetailsScreen() {
             <div>
               <HighchartsReact
                 highcharts={Highcharts}
-                options={optionsPie}
-              />
+                options={optionsPie}/>
             </div>
           </div>
         </div>
