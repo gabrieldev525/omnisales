@@ -4,6 +4,7 @@ import React from 'react'
 // project imports
 import ProductDetail from './containers/product/product-detail'
 import ProductList from './containers/product/product-list'
+import ProductCreate from './containers/product/product-registration'
 import CustomDashboard from './containers/dashboard'
 
 // third imports
@@ -11,9 +12,6 @@ import {
   FiAirplay,
   FiTrendingUp
 } from 'react-icons/fi'
-import {
-  MdDashboard
-} from 'react-icons/md'
 
 export const routes = [
   {
@@ -29,15 +27,22 @@ export const routes = [
     component: ProductList,
     exact: true,
     menu: true,
-    name: 'Produtos',
-    icon: <MdDashboard  />
+    name: 'Lista de produtos',
+    icon: <FiTrendingUp  />
   },
   {
     path: '/product/detail',
     component: ProductDetail,
     exact: false,
-    menu: true,
-    name: 'Detalhe do produto',
+    menu: false,
+    name: 'Detalhe do produto'
+  },
+  {
+    path: '/product/create',
+    component: ProductCreate,
+    exact: false,
+    menu: false,
+    name: 'Criação de produto',
     icon: <FiTrendingUp />
   },
 ]
