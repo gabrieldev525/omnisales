@@ -1,5 +1,5 @@
 // react imports
-import React from 'react'
+import React, {Component} from 'react'
 
 import {
   Route,
@@ -17,6 +17,9 @@ import notFound from './containers/error/not-found'
 
 
 const App = () => {
+
+
+
 
   return (
     <>

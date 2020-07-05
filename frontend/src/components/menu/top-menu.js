@@ -13,7 +13,6 @@ import '../../static/css/menu.scss'
 export default function topMenu() {
   return (
     <div className='container'>
-      <span>Dashboard</span>
       <ul>
         <li>
           <FiBell

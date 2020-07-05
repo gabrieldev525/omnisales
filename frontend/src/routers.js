@@ -2,15 +2,19 @@
 import React from 'react'
 
 // project imports
-import MainPage from './containers/main'
 import ProductDetail from './containers/product/product-detail'
-import CustomDashboard from './containers/dashboard'
 import Leads from './containers/leads/config-lead'
+import ProductList from './containers/product/product-list'
+import ProductCreate from './containers/product/product-registration'
+import CustomDashboard from './containers/dashboard'
+import ReportList from './containers/reports/report-list'
+import ReportConfig from './containers/reports/report-config'
 
 // third imports
 import {
   FiAirplay,
-  FiTrendingUp
+  FiTrendingUp,
+  FiFile
 } from 'react-icons/fi'
 import {
   MdDashboard,
@@ -21,18 +25,33 @@ import {
 export const routes = [
   {
     path: '/',
-    component: MainPage,
+    component: CustomDashboard,
     exact: true,
     menu: true,
-    name: 'Início',
+    name: 'Dashboards',
     icon: <FiAirplay />
+  },
+  {
+    path: '/product/list',
+    component: ProductList,
+    exact: true,
+    menu: true,
+    name: 'Lista de produtos',
+    icon: <FiTrendingUp  />
   },
   {
     path: '/product/detail',
     component: ProductDetail,
     exact: false,
-    menu: true,
-    name: 'Detalhe do produto',
+    menu: false,
+    name: 'Detalhe do produto'
+  },
+  {
+    path: '/product/create',
+    component: ProductCreate,
+    exact: false,
+    menu: false,
+    name: 'Criação de produto',
     icon: <FiTrendingUp />
   },
   {
@@ -43,6 +62,20 @@ export const routes = [
     name: 'Detalhe do produto',
     icon: <MdRecordVoiceOver />
   },
+    path: '/reports/list',
+    component: ReportList,
+    exact: false,
+    menu: true,
+    name: 'Lista de relatórios',
+    icon: <FiFile />
+  },
+  {
+    path: '/reports/config',
+    component: ReportConfig,
+    exact: false,
+    menu: false,
+    name: 'Configuração de relatórios'
+  }
 ]
 
 export default routes

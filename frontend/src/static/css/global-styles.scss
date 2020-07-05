@@ -10,4 +10,10 @@ html,
 #root {
   height: 100%;
   background: #E5E5E5;
+  overflow: none;
+}
+
+
+.flex-row {
+  display: flex;
 }
