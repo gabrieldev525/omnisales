@@ -41,7 +41,7 @@ const TableList = (props) => {
     <div className='table-list-content report-list'>
       <div className='container-header'>
         <button>Gerar novo</button>
-        <button className='config'>Configurar</button>
+        <button className='config' onClick={() => props.history.push('/reports/config')}>Configurar</button>
       </div>
       <table>
         <thead>

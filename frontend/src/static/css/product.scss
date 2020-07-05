@@ -325,10 +325,11 @@
   &.report-list {
     th, td {
       text-align: left;
+      color: $color-title;
     }
 
     button {
-      padding: 10px 1%;
+      padding: 10px 0;
       margin-left: 1%;
 
       &.config {

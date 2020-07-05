@@ -7,6 +7,7 @@ import ProductList from './containers/product/product-list'
 import ProductCreate from './containers/product/product-registration'
 import CustomDashboard from './containers/dashboard'
 import ReportList from './containers/reports/report-list'
+import ReportConfig from './containers/reports/report-config'
 
 // third imports
 import {
@@ -54,6 +55,13 @@ export const routes = [
     menu: true,
     name: 'Lista de relatórios',
     icon: <FiFile />
+  },
+  {
+    path: '/reports/config',
+    component: ReportConfig,
+    exact: false,
+    menu: false,
+    name: 'Configuração de relatórios'
   }
 ]
 
