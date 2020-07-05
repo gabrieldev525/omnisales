@@ -4,8 +4,8 @@ import React, { useState, useRef, useMemo } from 'react'
 // Third imports
 import { debounce } from 'lodash'
 import { FiCamera } from 'react-icons/fi'
-import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
+import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
 
 // Local imports
 import '../../static/css/product.scss'
@@ -13,7 +13,7 @@ import '../../static/css/product.scss'
 
 export default function ProductRegistration() {
   
-  const animatedComponents = makeAnimated();
+  const animatedComponents = makeAnimated()
   
   const [thumbnail, setThumbnail] = useState(null)
   const [text, setText] = useState('')
