@@ -3,10 +3,12 @@ import React from 'react'
 
 // project imports
 import MainPage from './containers/main'
+import ProductDetail from './containers/product/product-detail'
 
 // third imports
 import {
-  FiAirplay
+  FiAirplay,
+  FiTrendingUp
 } from 'react-icons/fi'
 import {
   MdDashboard
@@ -32,6 +34,14 @@ export const routes = [
     menu: true,
     name: 'Produtos',
     icon: <MdDashboard  />
+  },
+  {
+    path: '/product/detail',
+    component: ProductDetail,
+    exact: false,
+    menu: true,
+    name: 'Detalhe do produto',
+    icon: <FiTrendingUp />
   },
 ]
 
