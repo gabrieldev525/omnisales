@@ -2,8 +2,8 @@
 import React from 'react'
 
 // project imports
-import MainPage from './containers/main'
 import ProductDetail from './containers/product/product-detail'
+import ProductList from './containers/product/product-list'
 import CustomDashboard from './containers/dashboard'
 
 // third imports
@@ -15,9 +15,6 @@ import {
   MdDashboard
 } from 'react-icons/md'
 
-
-
-import Tabela from './components/tabela/table'
 export const routes = [
   {
     path: '/',
@@ -27,10 +24,9 @@ export const routes = [
     name: 'Dashboards',
     icon: <FiAirplay />
   },
-
   {
     path: '/product/list',
-    component: Tabela,
+    component: ProductList,
     exact: true,
     menu: true,
     name: 'Produtos',

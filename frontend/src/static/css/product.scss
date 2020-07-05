@@ -212,7 +212,7 @@
       .input-photo {
         display: none;
       }
-      
+
       .title {
         color: $color-title;
         margin: 1% 0;
@@ -306,5 +306,51 @@
         margin-top: 4%;
       }
     }
+  }
+}
+
+
+.table-list-content {
+  display: flex;
+  flex-direction: column;
+  background: $color-white;
+  width: 90%;
+  margin: 2% auto;
+  padding: 2%;
+  border-radius: 14px;
+
+  .container-header {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 2%;
+
+    button {
+      padding: 10px 4%;
+      border-radius: 14px;
+      background: $main-color;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    margin-bottom: 2%;
+  }
+
+  th, td {
+    padding: 1% 2%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    border-spacing: 0;
+  }
+
+  #stars {
+    font-size: 12px;
   }
 }

@@ -24,7 +24,7 @@ const App = () => {
   return (
     <>
       <HashRouter>
-        <Menu>         
+        <Menu>
           <Switch>
             {
               routers.map((route, index) => {
@@ -41,7 +41,7 @@ const App = () => {
             <Route component={notFound} />
           </Switch>
         </Menu>
-      </HashRouter>     
+      </HashRouter>
     </>
   )
 }
