@@ -8,7 +8,13 @@ import MainPage from './containers/main'
 import {
   FiAirplay
 } from 'react-icons/fi'
+import {
+  MdDashboard
+} from 'react-icons/md'
 
+
+
+import Tabela from './components/tabela/table'
 export const routes = [
   {
     path: '/',
@@ -17,6 +23,15 @@ export const routes = [
     menu: true,
     name: 'Início',
     icon: <FiAirplay />
+  },
+
+  {
+    path: '/product/list',
+    component: Tabela,
+    exact: true,
+    menu: true,
+    name: 'Produtos',
+    icon: <MdDashboard color='#fffff' />
   },
 ]
 
