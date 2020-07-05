@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 
 // third imports
 import { Responsive, WidthProvider } from 'react-grid-layout'
+import { BsGraphUp } from 'react-icons/bs'
+import { GoGraph } from 'react-icons/go'
 
 // static
 import '../../static/css/dashboard.scss'
@@ -55,6 +57,38 @@ const CustomDashboard = () => {
           }
         </div>
       </div>
+      {
+        editMode && (
+          <div className='dashboard-header dashboard-subheader'>
+            <div className='flex-row group-menu'>
+              <div className='dashboard-menuitem'>
+                <p>Dados do gráfico</p>
+                <select className='dashboard-select'>
+                  <option>Nome do dashboard</option>
+                </select>
+              </div>
+
+              <div>
+                <p>Tipo do gráfico</p>
+
+                <div className='graph-type-container flex-row'>
+                  <div className='graph-type-item'>
+                    <GoGraph size={20} />
+                  </div>
+                  <div className='graph-type-item'>
+                    <BsGraphUp size={20} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='action-button-right'>
+              <button
+                className='action-button main-button add-graph'
+                onClick={() => setEditMode(false)}>Adicionar gráfico</button>
+            </div>
+          </div>
+        )
+      }
 
       <ResponsiveGridLayout
         className='layout'

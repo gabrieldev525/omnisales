@@ -5,6 +5,7 @@
     flex-direction: column;
     width: 100%;
     padding: 1%;
+    box-sizing: border-box;
 
     .dashboard-header {
         display: flex;
@@ -12,11 +13,78 @@
         width: 100%;
         margin-bottom: 2%;
 
+        &.dashboard-subheader {
+            width: 100%;
+            .group-menu {
+                width: 50%;
+
+                .dashboard-menuitem {
+                    width: 60%;
+                    margin-right: 10%;
+                    .dashboard-select {
+                        width: 100%;
+                        margin-top: 3%;
+                        border: 1px solid #ccc;
+                        height: 40px;
+                    }
+                }
+            }
+            .action-button-right {
+                margin-right: 2%;
+
+                .add-graph {
+                    width: 200px;
+                    margin-right: 5%;
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                    background-color: transparent !important;
+                    border-radius: 14px;
+                    transition: 0.25s;
+
+                    &:hover {
+                        background-color: $main-color !important;
+                        color: white;
+                    }
+                }
+            }
+
+            .graph-type-container {
+                margin-top: 10px;
+
+                .graph-type-item {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #ccc;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    transition: 0.25s;
+
+                    &:hover {
+                        border-color: $main-color;
+                        color: $main-color;
+                    }
+
+                    &.active {
+                        background-color: $main-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
         .dashboard-name-input {
             background: none;
             border: 1px solid $button-color-secondary;
             border-radius: 14px;
             text-align: center;
+            padding: 0 1%;
+
+            &:focus {
+                border-color: $main-color;
+            }
         }
 
         .dashboard-select {
@@ -25,7 +93,6 @@
             width: 20%;
             padding: 1%;
 
-            // custom arrow
             -webkit-appearance: none;
             -moz-appearance: none;
             background: transparent;
@@ -40,21 +107,21 @@
             margin-right: 2%;
             align-items: center;
 
-            .action-button {
-                border: none;
-                border-radius: 14px;
-                color: white;
-                width: 100px;
-                margin-left: 3%;
-                cursor: pointer;
-                padding: 5% 0;
+        }
+        .action-button {
+            border: none;
+            border-radius: 14px;
+            color: white;
+            width: 100px;
+            margin-left: 3%;
+            cursor: pointer;
+            padding: 5% 0;
 
-                &.main-button {
-                    background-color: $main-color;
-                }
-                &.secondary-button {
-                    background-color: $button-color-secondary;
-                }
+            &.main-button {
+                background-color: $main-color;
+            }
+            &.secondary-button {
+                background-color: $button-color-secondary;
             }
         }
     }
