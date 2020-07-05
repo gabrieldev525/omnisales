@@ -1,5 +1,5 @@
 // react imports
-import React from 'react'
+import React, {Component} from 'react'
 
 import {
   Route,
@@ -18,10 +18,13 @@ import notFound from './containers/error/not-found'
 
 const App = () => {
 
+
+
+
   return (
     <>
       <HashRouter>
-        <Menu>
+        <Menu>         
           <Switch>
             {
               routers.map((route, index) => {
@@ -38,7 +41,7 @@ const App = () => {
             <Route component={notFound} />
           </Switch>
         </Menu>
-      </HashRouter>
+      </HashRouter>     
     </>
   )
 }

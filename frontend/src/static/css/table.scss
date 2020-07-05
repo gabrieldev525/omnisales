@@ -1,0 +1,124 @@
+body{
+    background-color: #E5E5E5;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 95%;
+    height: auto;
+    margin: 5% auto;
+    background-color: #FFFFFF;
+    border-radius: 14px;   
+
+  }  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    
+  }
+  td{
+    border-top: 1px solid #D3D3D3;
+}
+.cadastrar{
+    border:1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
+    background:#2196D9;
+    color:white;
+    border-radius:14px;
+    font-size: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;;
+    margin-left: 0;
+    position: absolute;
+    top:122px;
+    right: 265px;
+        
+}
+.editar{
+    border:1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
+    background:#949494;
+    color:white;
+    border-radius:14px;
+    font-size: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    top:122px;
+    right: 160px;
+ }
+ .deletar{
+    border:1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
+    background:#D92121;
+    color:white;
+    border-radius:14px;
+    font-size: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    top:122px;
+    right: 50px;
+ }
+ .botaoBuscar{
+    border:1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
+    background:#2196D9;
+    color:white;
+    border-radius:14px;
+    font-size: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    left: 320px;
+    top:122px;
+    position: absolute;
+    
+    
+    
+ }
+ .inputProcurar{
+    width: 180px;
+    border: 1px solid #949494;
+    border-radius: 14px;
+    height: 34px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 122px;
+    left: 130px;
+    margin-bottom: 10px;
+ }
+
+ .pagination {
+    display: inline-block;
+    position: absolute;
+    top: 430    px;
+    right: 25px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #2196D9;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
