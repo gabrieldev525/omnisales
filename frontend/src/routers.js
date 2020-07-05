@@ -3,6 +3,7 @@ import React from 'react'
 
 // project imports
 import ProductDetail from './containers/product/product-detail'
+import Leads from './containers/leads/config-lead'
 import ProductList from './containers/product/product-list'
 import ProductCreate from './containers/product/product-registration'
 import CustomDashboard from './containers/dashboard'
@@ -15,6 +16,11 @@ import {
   FiTrendingUp,
   FiFile
 } from 'react-icons/fi'
+import {
+  MdDashboard,
+  MdRecordVoiceOver
+} from 'react-icons/md'
+
 
 export const routes = [
   {
@@ -49,6 +55,13 @@ export const routes = [
     icon: <FiTrendingUp />
   },
   {
+    path: '/product/test/leads',
+    component: Leads,
+    exact: false,
+    menu: true,
+    name: 'Detalhe do produto',
+    icon: <MdRecordVoiceOver />
+  },
     path: '/reports/list',
     component: ReportList,
     exact: false,
