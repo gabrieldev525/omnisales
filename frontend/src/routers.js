@@ -5,8 +5,7 @@ import React from 'react'
 import ProductDetail from './containers/product/product-detail'
 import ProductList from './containers/product/product-list'
 import CustomDashboard from './containers/dashboard'
-import leads from './containers/leads'
-
+import LeadsList from './containers/leads/lead-list'
 
 // third imports
 import {
@@ -46,7 +45,7 @@ export const routes = [
   },
   {
     path: '/leads',
-    component: leads,
+    component: LeadsList,
     exact: true,
     menu: true,
     name: 'leads',

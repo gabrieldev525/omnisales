@@ -65,8 +65,6 @@ const tableLead = () => {
         </thead>
         <tbody>
           {leads.map((item, index) => {
-
-
             return (
               <tr key={index}>
                 <td id="nome">{item.nome}</td>
