@@ -12,9 +12,9 @@ import '../../static/css/product.scss'
 
 
 export default function ProductRegistration() {
-  
+
   const animatedComponents = makeAnimated()
-  
+
   const [thumbnail, setThumbnail] = useState(null)
   const [text, setText] = useState('')
   const [description, setDescription] = useState('')
@@ -65,7 +65,7 @@ export default function ProductRegistration() {
           <form>
             <label className='thumbail'>
               <FiCamera size={50} />
-              <input className='input-photo' type='file' onChange={event => setThumbnail(event.target.files[0])}/>
+              <input className='input-photo' type='file' onChange={event => setThumbnail(event.target.files[0])} />
               <p className='placeholder-to-indicate-the-image'>Click aqui para selecionar a foto do seu produto</p>
             </label>
 
@@ -86,7 +86,7 @@ export default function ProductRegistration() {
             />
 
             <label className='title' htmlFor='price-product'>Preço</label>
-            <input type='text' id='price-product' required onChange={handleChangePrice} placeholder='R$999.00'/>
+            <input type='text' id='price-product' required onChange={handleChangePrice} placeholder='R$999.00' />
 
             <div className='content-btn'>
               <button className='confirm-btn'>Cadastrar</button>
@@ -96,13 +96,11 @@ export default function ProductRegistration() {
         </div>
         <div className='container-product'>
           <div className='product'>
-            <img className='photo-product' src={preview}/>
+            <img className='photo-product' src={preview} />
             <p className='title'>{text}</p>
           </div>
           <div className='content-product'>
-            <div>
-              <p className='price'>{price}</p>
-            </div>
+            <p className='price'>{price}</p>
           </div>
           <div className='description'>
             <p>{description}</p>
