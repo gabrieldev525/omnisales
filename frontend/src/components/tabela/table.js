@@ -16,7 +16,6 @@ import '../../static/css/cadastroProduto.scss'
 
 const produtos = [
     {
-
         nomeDoProduto: 'Camisa Social Preta',
         platafroma: 'Mercado Livre',
         qtdDeVendas: '200',
@@ -25,7 +24,6 @@ const produtos = [
         avaliacao: 5,
         status: 'Em estoque'
     },
-
     {
         nomeDoProduto: 'Camisa Social Azul',
         platafroma: 'Mercado Livre',
@@ -35,7 +33,6 @@ const produtos = [
         avaliacao: 4.5,
         status: 'Em estoque'
     },
-
     {
         nomeDoProduto: 'Camisa Social Vermelha',
         platafroma: 'Mercado Livre',
@@ -45,7 +42,6 @@ const produtos = [
         avaliacao: 4,
         status: 'Em estoque'
     }
-
 ];
 
 const TableHeadbutton = () => {
@@ -60,13 +56,6 @@ const TableHeadbutton = () => {
         </thead>
     );
 }
-
-// function marcarDesmarcar(source)  {
-//     checkboxes = document.getElementById('foo');
-//     for(var i=0, n=checkboxes.length;i<n;i++) {
-//     checkboxes[i].checked = source.checked;
-//     }
-// }   
 
 const TableHead = () => {
     return (
@@ -85,7 +74,6 @@ const TableHead = () => {
     );
 }
 
-
 const TableBody = props => {
     const linhas = produtos.map((linha, index) => {
 
@@ -99,12 +87,7 @@ const TableBody = props => {
             } else {
                 stars.push(<BsStar color='#F9A94B' size={20} />)
             }
-
         }
-
-
-
-
         return (
             <tr key={index}>
                 <td><input type="checkbox" id="foo" name="foo"  ></input></td>
@@ -125,12 +108,8 @@ const TableBody = props => {
         </tbody>
     )
 }
-
-
-
 class Tabela extends Component {
     render() {
-
         return (
             <>
                 <table className="tabela">
@@ -145,8 +124,6 @@ class Tabela extends Component {
                         <a href="#">&raquo;</a>
                     </div>
                 </table>
-
-
             </>
         );
     }
