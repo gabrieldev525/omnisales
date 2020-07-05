@@ -1,4 +1,4 @@
-import React,{Component, Fragment} from 'react'
+import React, { Component, Fragment } from 'react'
 import '../../static/css/table.scss'
 import {
     BsStarFill,
@@ -6,17 +6,17 @@ import {
     BsStar,
     BsPencil,
     BsTrash
-  } from 'react-icons/bs'
-  import {
+} from 'react-icons/bs'
+import {
     AiOutlinePlus
-  } from 'react-icons/ai'
+} from 'react-icons/ai'
 
-  import '../../static/css/cadastroProduto.scss'
+import '../../static/css/cadastroProduto.scss'
 
 
 const produtos = [
     {
-    
+
         nomeDoProduto: 'Camisa Social Preta',
         platafroma: 'Mercado Livre',
         qtdDeVendas: '200',
@@ -52,26 +52,21 @@ const TableHeadbutton = () => {
     return (
         <thead>
             <tr>
-                <th><input  className="inputProcurar" placeholder="Buscar por nome de produto"></input> <button className="botaoBuscar">Buscar</button></th>
+                <th><input className="inputProcurar" placeholder="Buscar por nome de produto"></input> <button className="botaoBuscar">Buscar</button></th>
                 <th><button className="cadastrar" ><AiOutlinePlus color='#fffff' size={12} /> Cadastrar</button> </th>
-                <th><button className="editar"> <BsPencil color='#fffff' size={12}  /> Editar</button></th>
+                <th><button className="editar"> <BsPencil color='#fffff' size={12} /> Editar</button></th>
                 <th><button className="deletar"> <BsTrash color='#fffff' size={12} /> Deletar</button></th>
-                <th></th>
-                <th></th>
-                         
-                      
-            
             </tr>
         </thead>
     );
-}  
+}
 
-    // function marcarDesmarcar(source)  {
-    //     checkboxes = document.getElementById('foo');
-    //     for(var i=0, n=checkboxes.length;i<n;i++) {
-    //     checkboxes[i].checked = source.checked;
-    //     }
-    // }   
+// function marcarDesmarcar(source)  {
+//     checkboxes = document.getElementById('foo');
+//     for(var i=0, n=checkboxes.length;i<n;i++) {
+//     checkboxes[i].checked = source.checked;
+//     }
+// }   
 
 const TableHead = () => {
     return (
@@ -92,25 +87,25 @@ const TableHead = () => {
 
 
 const TableBody = props => {
-    const linhas = produtos.map((linha,index) => {
+    const linhas = produtos.map((linha, index) => {
 
-        let has_decimal_point = linha.avaliacao.toString().split('.').length > 1       
-        let stars = [] 
-        for (let i = 0; i < 5 ; i++) {
+        let has_decimal_point = linha.avaliacao.toString().split('.').length > 1
+        let stars = []
+        for (let i = 0; i < 5; i++) {
             if (i + 1 <= linha.avaliacao) {
                 stars.push(<BsStarFill color='#F9A94B' size={20} />)
-            }else if (has_decimal_point){
+            } else if (has_decimal_point) {
                 stars.push(<BsStarHalf color='#F9A94B' size={20} />)
-            }else{
+            } else {
                 stars.push(<BsStar color='#F9A94B' size={20} />)
             }
-            
+
         }
 
 
-        
 
-        return(
+
+        return (
             <tr key={index}>
                 <td><input type="checkbox" id="foo" name="foo"  ></input></td>
                 <td id="nomeDoProduto">{linha.nomeDoProduto}</td>
@@ -119,12 +114,12 @@ const TableBody = props => {
                 <td id="dataDePublicacao">{linha.dataDePublicacao}</td>
                 <td id="preco">{linha.preco}</td>
                 <td id="stars">{stars}</td>
-                <td id="status">{linha.status}</td>                                           
+                <td id="status">{linha.status}</td>
             </tr>
         )
     });
 
-    return(
+    return (
         <tbody id="tabela">
             {linhas}
         </tbody>
@@ -134,25 +129,25 @@ const TableBody = props => {
 
 
 class Tabela extends Component {
-    render(){       
+    render() {
 
-        return(
-            <>                      
+        return (
+            <>
                 <table className="tabela">
                     <TableHeadbutton />
                     <TableHead />
-                    <TableBody produtos = {produtos} />
+                    <TableBody produtos={produtos} />
                     <div class="pagination">
                         <a href="#">&laquo;</a>
                         <a href="#" className="active">1</a>
                         <a href="#">2</a>
-                        <a href="#">3</a>                        
+                        <a href="#">3</a>
                         <a href="#">&raquo;</a>
                     </div>
-                </table> 
-                
-                       
-            </>  
+                </table>
+
+
+            </>
         );
     }
 }

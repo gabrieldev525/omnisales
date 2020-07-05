@@ -31,7 +31,7 @@ export const routes = [
     exact: true,
     menu: true,
     name: 'Produtos',
-    icon: <MdDashboard color='#fffff' />
+    icon: <MdDashboard  />
   },
 ]
 
