@@ -20,6 +20,8 @@ export default function ProductRegistration() {
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
 
+  const timer = 500
+
   const options = [
     { value: 'Desapega', label: 'Desapega' },
     { value: 'Xlo', label: 'Xlo' },
@@ -35,17 +37,17 @@ export default function ProductRegistration() {
   const delayedQueryText = useRef(
     debounce(e => {
       setText(e)
-    }, 500)
+    }, timer)
   ).current
   const delayedQueryDescription = useRef(
     debounce(e => {
       setDescription(e)
-    }, 500)
+    }, timer)
   ).current
   const delayedQueryPrice = useRef(
     debounce(e => {
       setPrice(e)
-    }, 500)
+    }, timer)
   ).current
 
   function handleChangeTitle(e) {
