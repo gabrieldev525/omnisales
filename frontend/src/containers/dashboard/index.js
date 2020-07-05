@@ -9,10 +9,18 @@ import { GoGraph } from 'react-icons/go'
 // static
 import '../../static/css/dashboard.scss'
 
+// project imports
+import GraphType from '../../components/dashboard/graph-type'
+
+// local imports
+import { DASHBOARD_GRAPHICS } from './constants'
+
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const CustomDashboard = () => {
   const [editMode, setEditMode] = useState(false)
+  const [selectedGraph, setSelectedGraph] = useState(null)
+  const [selectedType, setSelectedType] = useState(null)
 
   const layout = [
     {i: 'a', x: 0, y: 0, w: 1, h: 2, static: true},
@@ -21,6 +29,11 @@ const CustomDashboard = () => {
   ]
 
   const style = {width: '90px', height: '90px', backgroundColor: 'white' }
+
+  const onChangeGraphSelect = (event) => {
+    setSelectedGraph(parseInt(event.target.value))
+    setSelectedType(null)
+  }
 
   return (
     <div className='dashboard-container'>
@@ -57,29 +70,47 @@ const CustomDashboard = () => {
           }
         </div>
       </div>
+
+      {/* edit mode subheader */}
       {
         editMode && (
           <div className='dashboard-header dashboard-subheader'>
             <div className='flex-row group-menu'>
               <div className='dashboard-menuitem'>
                 <p>Dados do gráfico</p>
-                <select className='dashboard-select'>
-                  <option>Nome do dashboard</option>
+                <select
+                  className='dashboard-select'
+                  onChange={onChangeGraphSelect}>
+                  <option disabled selected value>selecione um dashbord</option>
+                  {
+                    DASHBOARD_GRAPHICS.map((item, index) => {
+                      return <option key={index} value={index}>{item.name ? item.name : '---'}</option>
+                    })
+                  }
                 </select>
               </div>
 
-              <div>
-                <p>Tipo do gráfico</p>
+              {
+                selectedGraph != null && (
+                  <div>
+                    <p>Tipo do gráfico</p>
 
-                <div className='graph-type-container flex-row'>
-                  <div className='graph-type-item'>
-                    <GoGraph size={20} />
+                    <div className='graph-type-container flex-row'>
+                      {
+                        DASHBOARD_GRAPHICS[selectedGraph].types.map((item, index) => {
+                          return (
+                            <GraphType
+                              type={item}
+                              key={index}
+                              className={selectedType == index && 'active'}
+                              onClick={() => setSelectedType(index)} />
+                          )
+                        })
+                      }
+                    </div>
                   </div>
-                  <div className='graph-type-item'>
-                    <BsGraphUp size={20} />
-                  </div>
-                </div>
-              </div>
+                )
+              }
             </div>
             <div className='action-button-right'>
               <button
