@@ -11,7 +11,7 @@ import makeAnimated from 'react-select/animated'
 import '../../static/css/product.scss'
 
 
-export default function ProductRegistration() {
+export default function ProductRegistration(props) {
 
   const animatedComponents = makeAnimated()
 
@@ -91,8 +91,8 @@ export default function ProductRegistration() {
             <input type='text' id='price-product' required onChange={handleChangePrice} placeholder='R$999.00' />
 
             <div className='content-btn'>
-              <button className='confirm-btn'>Cadastrar</button>
-              <button className='cancel-btn'>Cancelar</button>
+              <button className='confirm-btn' onClick={() => props.history.push('/product/list')}>Cadastrar</button>
+              <button className='cancel-btn' onClick={() => props.history.push('/product/list')}>Cancelar</button>
             </div>
           </form>
         </div>
