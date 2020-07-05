@@ -5,6 +5,8 @@ import React from 'react'
 import ProductDetail from './containers/product/product-detail'
 import ProductList from './containers/product/product-list'
 import CustomDashboard from './containers/dashboard'
+import leads from './containers/leads'
+
 
 // third imports
 import {
@@ -14,6 +16,8 @@ import {
 import {
   MdDashboard
 } from 'react-icons/md'
+
+
 
 export const routes = [
   {
@@ -26,7 +30,7 @@ export const routes = [
   },
   {
     path: '/product/list',
-    component: ProductList,
+    component:ProductList,
     exact: true,
     menu: true,
     name: 'Produtos',
@@ -40,6 +44,14 @@ export const routes = [
     name: 'Detalhe do produto',
     icon: <FiTrendingUp />
   },
+  {
+    path: '/leads',
+    component: leads,
+    exact: true,
+    menu: true,
+    name: 'leads',
+    icon: <FiAirplay />
+  }
 ]
 
 export default routes
