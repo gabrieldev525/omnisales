@@ -2,7 +2,7 @@
 import React, { useState, useRef, useMemo } from 'react'
 
 // Third imports
-import { debounce, set } from 'lodash'
+import { debounce } from 'lodash'
 import { FiCamera } from 'react-icons/fi'
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
@@ -10,17 +10,18 @@ import makeAnimated from 'react-select/animated';
 // Local imports
 import '../../static/css/product.scss'
 
-const animatedComponents = makeAnimated();
 
 export default function ProductRegistration() {
-
+  
+  const animatedComponents = makeAnimated();
+  
   const [thumbnail, setThumbnail] = useState(null)
   const [text, setText] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
 
   const options = [
-    { key: 1, value: 'Desapega', label: 'Desapega' },
+    { value: 'Desapega', label: 'Desapega' },
     { value: 'Xlo', label: 'Xlo' },
     { value: 'SlP', label: 'SlP' },
     { value: 'Big preço', label: 'Big preço' },
@@ -85,7 +86,7 @@ export default function ProductRegistration() {
             />
 
             <label className='title' htmlFor='price-product'>Preço</label>
-            <input type='text' id='price-product' required onChange={handleChangePrice} placeholder='exemplo... R$0000'/>
+            <input type='text' id='price-product' required onChange={handleChangePrice} placeholder='R$999.00'/>
 
             <div className='content-btn'>
               <button className='confirm-btn'>Cadastrar</button>
@@ -96,15 +97,12 @@ export default function ProductRegistration() {
         <div className='container-product'>
           <div className='product'>
             <img className='photo-product' src={preview}/>
-            {/* <span>{preview}</span> */}
             <p className='title'>{text}</p>
           </div>
           <div className='content-product'>
             <div>
               <p className='price'>{price}</p>
             </div>
-            {/* <span>{}</span> */}
-            {/* <div className='info-platform'> </div> */}
           </div>
           <div className='description'>
             <p>{description}</p>
