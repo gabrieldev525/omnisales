@@ -4,6 +4,7 @@ import React from 'react'
 // project imports
 import MainPage from './containers/main'
 import ProductDetail from './containers/product/product-detail'
+import CustomDashboard from './containers/dashboard'
 
 // third imports
 import {
@@ -14,10 +15,10 @@ import {
 export const routes = [
   {
     path: '/',
-    component: MainPage,
+    component: CustomDashboard,
     exact: true,
     menu: true,
-    name: 'Início',
+    name: 'Dashboards',
     icon: <FiAirplay />
   },
   {

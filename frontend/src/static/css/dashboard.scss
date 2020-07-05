@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2%;
+
+        .dashboard-name-input {
+            background: none;
+            border: 1px solid $button-color-secondary;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .dashboard-select {
+            border: none;
+            background: none;
+            width: 20%;
+            padding: 1%;
+
+            // custom arrow
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: 5px;
+        }
+
+        .action-button-container {
+            display: flex;
+            margin-right: 2%;
+            align-items: center;
+
+            .action-button {
+                border: none;
+                border-radius: 14px;
+                color: white;
+                width: 100px;
+                margin-left: 3%;
+                cursor: pointer;
+                padding: 5% 0;
+
+                &.main-button {
+                    background-color: $main-color;
+                }
+                &.secondary-button {
+                    background-color: $button-color-secondary;
+                }
+            }
+        }
+    }
+}
