@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { Responsive, WidthProvider } from 'react-grid-layout'
 import { BsGraphUp } from 'react-icons/bs'
 import { GoGraph } from 'react-icons/go'
+import { find, map } from 'lodash'
 
 // static
 import '../../static/css/dashboard.scss'
@@ -23,16 +24,6 @@ const CustomDashboard = () => {
   const [selectedGraph, setSelectedGraph] = useState(null)
   const [selectedType, setSelectedType] = useState(null)
   const [layout, setLayout] = useState({})
-  const [breakpoint, setBreakpoint] = useState({  })
-  const [cols, setCols] = useState({ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 })
-
-  // const layout = [
-  //   {i: 'a', x: 0, y: 0, w: 1, h: 2, static: true},
-  //   {i: 'b', x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4},
-  //   {i: 'c', x: 4, y: 0, w: 1, h: 2}
-  // ]
-
-  const style = {width: '90px', height: '90px', backgroundColor: 'white' }
 
   const onChangeGraphSelect = (event) => {
     setSelectedGraph(parseInt(event.target.value))
@@ -47,25 +38,29 @@ const CustomDashboard = () => {
     let data = {
       element: DASHBOARD_GRAPHICS[selectedGraph].element,
       type: DASHBOARD_GRAPHICS[selectedGraph].types[selectedType],
+      title: DASHBOARD_GRAPHICS[selectedGraph].name,
       i: key.toString(),
-      // x: key * 2,
-      // y: 0,
+      x: key * 2,
+      y: 0,
       w: 2,
       h: 2
     }
-      // minW: 2,
-      // maxW: 2
-
     setLayout({ ...layout, [key]: data })
   }
 
-  const onBreakpointChange = (breakpoint, cols) => {
-    setBreakpoint(breakpoint)
-    setCols(cols)
-  }
+  const onLayoutChange = (new_layout) => {
+    let newLayout = map(new_layout, out => {
+      let oldLayout = find(layout, data => {
+        return data.i == out.i
+      })
+      return {
+        ...out,
+        element: oldLayout.element,
+        type: oldLayout.type
+      }
+    })
 
-  const onLayoutChange = (layout) => {
-    setLayout(layout)
+    setLayout(newLayout)
   }
 
   return (
@@ -158,23 +153,21 @@ const CustomDashboard = () => {
         className='layout'
         isDraggable={editMode}
         isResizable={editMode}
-        // isDroppable={editMode}
-        onBreakpointChange={onBreakpointChange}
-        // onLayoutChange={onLayoutChange}
+        onLayoutChange={onLayoutChange}
         layouts={layout}
-        // breakpoints={breakpoint}
-        // cols={cols}
-        rowHeight={30}>
+        rowHeight={30}
+        verticalCompact={false}
+        preventCollision={false}
+        cols={{lg: 60, md: 60, sm: 60, xs: 60, xxs: 60}}>
         {
-          Object.entries(layout).map(([key, item], index) => {
-            console.log(item)
-            console.log(item['i'])
+          Object.entries(layout).map(([key, item]) => {
             return (
-              <Element
-                element={item['element']}
-                type={item['type']}
-                key={item['i']}
-                datagrid={item} />
+              <div key={item['i']} data-grid={item}>
+                <Element
+                  element={item['element']}
+                  type={item['type']}
+                  title={item['title']} />
+              </div>
             )
           })
         }
