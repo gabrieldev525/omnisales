@@ -151,29 +151,36 @@ const CustomDashboard = () => {
         )
       }
 
-      <ResponsiveGridLayout
-        className='layout'
-        isDraggable={editMode}
-        isResizable={editMode}
-        onLayoutChange={onLayoutChange}
-        layouts={layout}
-        rowHeight={30}
-        verticalCompact={false}
-        preventCollision={false}
-        cols={{lg: 60, md: 60, sm: 60, xs: 60, xxs: 60}}>
-        {
-          Object.entries(layout).map(([key, item]) => {
-            return (
-              <div key={item['i']} data-grid={item}>
-                <Element
-                  element={item['element']}
-                  type={item['type']}
-                  title={item['title']} />
-              </div>
-            )
-          })
-        }
-      </ResponsiveGridLayout>
+      {
+        Object.keys(layout).length > 0 ? (
+          <ResponsiveGridLayout
+            className='layout'
+            isDraggable={editMode}
+            isResizable={editMode}
+            onLayoutChange={onLayoutChange}
+            layouts={layout}
+            rowHeight={30}
+            verticalCompact={false}
+            preventCollision={false}
+            cols={{lg: 60, md: 60, sm: 60, xs: 60, xxs: 60}}>
+            {
+              Object.entries(layout).map(([key, item]) => {
+                return (
+                  <div key={item['i']} data-grid={item}>
+                    <Element
+                      element={item['element']}
+                      type={item['type']}
+                      title={item['title']} />
+                  </div>
+                )
+              })
+            }
+          </ResponsiveGridLayout>
+        ) : (
+          <h3 className='no-graph'>Nenhum gráfico no dashboard</h3>
+        )
+      }
+
     </div>
   )
 }
