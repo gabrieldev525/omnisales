@@ -165,18 +165,18 @@ export default function ProductDetailScreen() {
         <div className='container-product'>
           <div className='product'>
             <img className='photo-product' src={Tv} />
-            <p className='title'>Televisão SmartTV 40 polegadas Samsung</p>
+            <p className='title'>Televisão 4K</p>
           </div>
           <div className='content-product'>
             <div>
-              <p className='price'>R$1570,89</p>
+              <p className='price'>R$1554.99</p>
               <div className='product-container-stars'>
                 {renderStars()}
               </div>
             </div>
             <div className='info-platform'>
               <FaSuitcase color='#7d490d' className='bag-icon' />
-              <p>3 plataformas</p>
+              <p>4 plataformas</p>
             </div>
           </div>
           <div className='description'>
@@ -188,8 +188,8 @@ export default function ProductDetailScreen() {
             <div className='content-user'>
               <img src={Beto} />
               <div>
-                <p className='name-user'>username</p>
-                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p className='name-user'>João alencar</p>
+                <p className='comment-user'>Produto com excelente qualidade!!</p>
               </div>
               <div className='product-container-stars'>
                 {renderStars()}
@@ -199,8 +199,8 @@ export default function ProductDetailScreen() {
             <div className='content-user'>
               <img src={Betinho} />
               <div>
-                <p className='name-user'>username</p>
-                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p className='name-user'>Cléber silveira</p>
+                <p className='comment-user'>Atendeu as minhas expectativas</p>
               </div>
               <div className='product-container-stars'>
                 {renderStars()}
@@ -210,8 +210,8 @@ export default function ProductDetailScreen() {
             <div className='content-user'>
               <img src={Girl} />
               <div>
-                <p className='name-user'>username</p>
-                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p className='name-user'>Joana silva</p>
+                <p className='comment-user'>Produto incrível, recomendo para todos!!</p>
               </div>
               <div className='product-container-stars'>
               {renderStars()}
@@ -221,8 +221,8 @@ export default function ProductDetailScreen() {
             <div className='content-user'>
               <img src={Gil} />
               <div>
-                <p className='name-user'>username</p>
-                <p className='comment-user'>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p className='name-user'>Marcos silva</p>
+                <p className='comment-user'>Gostei do produto, mas acredito que o material não seja tão resistente.</p>
               </div>
               <div className='product-container-stars'>
               {renderStars()}

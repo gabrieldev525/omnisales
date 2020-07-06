@@ -1,17 +1,13 @@
 // react imports
 import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
 
 // third imports
 import {
   BsStarFill,
   BsStarHalf,
   BsStar,
-  BsPencil,
-  BsTrash
 } from 'react-icons/bs'
-import {
-  AiOutlinePlus
-} from 'react-icons/ai'
 
 // project imports
 import '../../static/css/product.scss'
@@ -76,11 +72,11 @@ const produtos = [
 ]
 
 
-const TableList = () => {
+const TableList = (props) => {
   return (
     <div className='table-list-content'>
       <div className='container-header'>
-        <button>Criar</button>
+        <button onClick={() => props.history.push('/product/create')}>Criar</button>
       </div>
       <table>
         <thead>
@@ -111,7 +107,7 @@ const TableList = () => {
               }
 
               return (
-                <tr key={index}>
+                <tr key={index} onClick={() => props.history.push('/product/detail')}>
                   <td><input type="checkbox" id="foo" name="foo"  ></input></td>
                   <td id="nomeDoProduto">{item.nomeDoProduto}</td>
                   <td id="plataforma">{item.platafroma}</td>
@@ -130,4 +126,4 @@ const TableList = () => {
   )
 }
 
-export default TableList
+export default withRouter(TableList)

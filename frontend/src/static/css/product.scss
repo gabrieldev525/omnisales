@@ -97,6 +97,7 @@
 
       .photo-product {
         width: 250px;
+        margin: 2% 0;
       }
 
       .title {
@@ -186,7 +187,7 @@
 
         div .comment-user {
           color: $color-light-gray;
-          font-size: 11px;
+          font-size: 14px;
         }
       }
     }
@@ -279,11 +280,12 @@
         button {
           outline: none;
           cursor: pointer;
-          margin-top: 4%;
+          margin-top: 1%;
+          margin-bottom: 2%;
           color: $color-white;
           font-size: 14px;
-          width: 20%;
-          padding: 2% 0;
+          width: 15%;
+          padding: 15px 0;
           margin-right: 5%;
           border-radius: 14px;
           border: none;
@@ -300,6 +302,7 @@
       margin: 3% 0;
       width: 90%;
       padding: 10% 0;
+      margin-top: 2%;
       border: 2px dashed $color-dark-white;
 
       .placeholder-to-indicate-the-image {
@@ -319,6 +322,22 @@
   padding: 2%;
   border-radius: 14px;
 
+  &.report-list {
+    th, td {
+      text-align: left;
+      color: $color-title;
+    }
+
+    button {
+      padding: 10px 0;
+      margin-left: 1%;
+
+      &.config {
+        background-color: $color-title;
+      }
+    }
+  }
+
   .container-header {
     display: flex;
     justify-content: right;
@@ -330,6 +349,7 @@
       background: $main-color;
       color: #fff;
       border: none;
+      cursor: pointer;
     }
   }
 
