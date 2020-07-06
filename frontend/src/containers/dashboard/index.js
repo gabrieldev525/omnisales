@@ -89,7 +89,9 @@ const CustomDashboard = () => {
               </>
             ) : (
               <>
-                <button className='action-button main-button'>Criar</button>
+                <button
+                  className='action-button main-button'
+                  onClick={() => setEditMode(true)}>Criar</button>
                 <button
                   className='action-button secondary-button'
                   onClick={() => setEditMode(true)}>Editar</button>
