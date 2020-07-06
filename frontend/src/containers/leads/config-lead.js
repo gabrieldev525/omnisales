@@ -19,7 +19,7 @@ export default function configLead() {
         </div>
         <div className='info-token'>
           <p className='token-title'>Configuração das chaves dos dados da requisição</p>
-          <p className='description'>Você precisa definir quais as chaves que irão vir na requisição dos leads que serão armazenados</p>
+          <p className='description'>Você precisa definir quais as chaves que irão vir na requisição dos leads que serão armazenados</p>
         </div>
 
         <form>
@@ -32,6 +32,7 @@ export default function configLead() {
           <label htmlFor='chaveCell'>Chave do celular</label>
           <input type='text' id='chaveCell'/>
         </form>
+        <button>Salvar</button>
       </div>
       <div className='content-img-info'>
         <img src={backgroundInfo} />

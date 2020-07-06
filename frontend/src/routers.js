@@ -7,6 +7,7 @@ import Leads from './containers/leads/config-lead'
 import ProductList from './containers/product/product-list'
 import ProductCreate from './containers/product/product-registration'
 import CustomDashboard from './containers/dashboard'
+import LeadsList from './containers/leads/lead-list'
 import ReportList from './containers/reports/report-list'
 import ReportConfig from './containers/reports/report-config'
 
@@ -17,9 +18,9 @@ import {
   FiFile
 } from 'react-icons/fi'
 import {
-  MdDashboard,
   MdRecordVoiceOver
 } from 'react-icons/md'
+
 
 
 export const routes = [
@@ -33,7 +34,7 @@ export const routes = [
   },
   {
     path: '/product/list',
-    component: ProductList,
+    component:ProductList,
     exact: true,
     menu: true,
     name: 'Lista de produtos',
@@ -55,13 +56,21 @@ export const routes = [
     icon: <FiTrendingUp />
   },
   {
-    path: '/product/test/leads',
+    path: '/leads/config',
     component: Leads,
     exact: false,
-    menu: true,
-    name: 'Detalhe do produto',
-    icon: <MdRecordVoiceOver />
+    menu: false,
+    name: 'Configuração de leads',
   },
+  {
+    path: '/leads',
+    component: LeadsList,
+    exact: true,
+    menu: true,
+    name: 'leads',
+    icon: <MdRecordVoiceOver />,
+  },
+  {
     path: '/reports/list',
     component: ReportList,
     exact: false,
