@@ -1,0 +1,99 @@
+@import './variables.scss';
+
+.container-main-leads {
+  display: flex;
+  margin: 1% auto 0;
+  width: 90%;
+  padding: 1% 0;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(157, 157, 157, 0.25);
+
+  .content-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    width: 50%;
+    height: 100%;
+
+    div {
+      .title {
+        margin-top: 5%;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .url-content {
+        margin-top: 1%;
+        font-size: 16px;
+        color: $color-light-gray;
+      }
+    }
+
+    .info-token {
+      margin: 5% 0;
+      width: 70%;
+
+      .token-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .description {
+        margin-top: 2%;
+        font-size: 14PX;
+        color: $color-light-gray;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      label {
+        margin: 2% 0;
+      }
+
+      input {
+        outline: none;
+        padding: 2% 3%;
+        margin-bottom: 5%;
+        border: 1px solid $color-light-gray;
+        border-radius: 14px;
+      }
+    }
+  }
+
+  button {
+    width: 20%;
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+    background-color: $main-color;
+    color: #fff;
+    border: none;
+    padding: 1% 5%;
+    border-radius: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-title;
+    }
+  }
+
+  .content-img-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+
+    img {
+      width: 80%;
+    }
+  }
+}
