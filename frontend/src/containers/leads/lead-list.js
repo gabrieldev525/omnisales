@@ -49,10 +49,11 @@ const leads = [
 ]
 
 
-const tableLead = () => {
+const tableLead = (props) => {
   return (
     <div className='table-list-content'>
       <div className='container-header'>
+        <button className='config' onClick={() => props.history.push('/leads/config')}>Configurar</button>
       </div>
       <table>
         <thead>
