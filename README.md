@@ -21,3 +21,6 @@ The omnisales was a project developed at megahack that consist in a platform of 
 - Run migrations in backend: ```adonis migration:run```
 
 
+#### Running your project
+- In frontend run: ```npm start``` 
+- In backend run: ``adonis serve --dev```
